@@ -325,10 +325,10 @@ data:
 
   # Otherwise pass connection values in
   metadataConnection:
-    user: postgres
-    pass: postgres
+    user: Y2l0dXN1c2Vy
+    pass: Y2l0dXNwYXNzd29yZA==
     protocol: postgresql
-    host: ~
+    host: postgres-service
     port: 5432
     db: postgres
     sslmode: disable
