@@ -6,7 +6,6 @@ images:
     repository: apache/airflow
     tag: latest
     pullPolicy: IfNotPresent
-  useDefaultImageForMigration: true
   statsd:
     repository: cachengo/airflow-statsd-exporter
     tag: latest
