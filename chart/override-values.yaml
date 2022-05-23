@@ -6,6 +6,7 @@ images:
     repository: apache/airflow
     tag: latest
     pullPolicy: IfNotPresent
+  useDefaultImageForMigration: true
   statsd:
     repository: cachengo/airflow-statsd-exporter
     tag: latest
@@ -15,6 +16,9 @@ images:
     tag: latest
   pgbouncerExporter:
     repository: cachengo/airflow-pgbouncer-exporter
+    tag: latest
+  flower: 
+    repository: cachengo/flower
     tag: latest
   gitSync:
     repository: thockin/git-sync
