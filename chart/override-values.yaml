@@ -6,9 +6,31 @@ images:
     repository: apache/airflow
     tag: latest
     pullPolicy: IfNotPresent
-
+  statsd:
+    repository: cachengo/airflow-statsd-exporter
+    tag: latest
+    pullPolicy: IfNotPresent
+  pgbouncer:
+    repository: cachengo/pgbouncer
+    tag: latest
+  pgbouncerExporter:
+    repository: cachengo/airflow-pgbouncer-exporter
+    tag: latest
+  gitSync:
+    repository: thockin/git-sync
+    tag: :v3.1.6-dirty__linux_arm64
+    pullPolicy: IfNotPresent
+  
 data:
   metadataConnection:
     user: Y2l0dXN1c2Vy
     pass: Y2l0dXNwYXNzd29yZA==
     host: postgres-service
+
+dags:
+  persistence:
+    enabled: false
+  gitSync:
+    repo: ssh://git@github.com/cachengo/Airflow-Dags
+    branch: main
+    subPath: ""
