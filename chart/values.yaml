@@ -1570,7 +1570,7 @@ dags:
     # ssh examples ssh://git@github.com/apache/airflow.git
     # git@github.com:apache/airflow.git
     # https example: https://github.com/apache/airflow.git
-    repo: https://github.com/cachengo/Airflow-Dags
+    repo: ssh://git@github.com/cachengo/Airflow-Dags
     branch: main
     rev: HEAD
     depth: 1
