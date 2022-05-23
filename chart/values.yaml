@@ -323,10 +323,10 @@ data:
 
   # Otherwise pass connection values in
   metadataConnection:
-    user: Y2l0dXN1c2Vy
-    pass: Y2l0dXNwYXNzd29yZA==
+    user: postgres
+    pass: postgres
     protocol: postgresql
-    host: postgres-service
+    host: ~
     port: 5432
     db: postgres
     sslmode: disable
@@ -1441,7 +1441,7 @@ cleanup:
 # Configuration for postgresql subchart
 # Not recommended for production
 postgresql:
-  enabled: false
+  enabled: true
   postgresqlPassword: postgres
   postgresqlUsername: postgres
 
