@@ -1,0 +1,14 @@
+postgresql:
+  enabled: false
+
+images:
+  airflow:
+    repository: apache/airflow
+    tag: latest
+    pullPolicy: IfNotPresent
+
+data:
+  metadataConnection:
+    user: Y2l0dXN1c2Vy
+    pass: Y2l0dXNwYXNzd29yZA==
+    host: postgres-service
