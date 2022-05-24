@@ -1,10 +1,10 @@
-defaultAirflowTag: latest
+defaultAirflowTag: "2.3.0"
 
 images:
-  airflow:
-    repository: apache/airflow
-    tag: latest
-    pullPolicy: IfNotPresent
+  # airflow:
+  #   repository: apache/airflow
+  #   tag: latest
+  #   pullPolicy: IfNotPresent
   statsd:
     repository: cachengo/airflow-statsd-exporter
     tag: latest
@@ -15,9 +15,9 @@ images:
   pgbouncerExporter:
     repository: cachengo/airflow-pgbouncer-exporter
     tag: latest
-  flower: 
-    repository: apache/airflow
-    tag: latest
+  # flower: 
+  #   repository: apache/airflow
+  #   tag: latest
   gitSync:
     repository: thockin/git-sync
     tag: :v3.1.6-dirty__linux_arm64
