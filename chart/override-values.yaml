@@ -16,13 +16,13 @@ images:
   pgbouncerExporter:
     repository: cachengo/airflow-pgbouncer-exporter
     tag: latest
-  flower: 
-    repository: cachengo/flower
-    tag: latest
   gitSync:
     repository: thockin/git-sync
     tag: :v3.1.6-dirty__linux_arm64
     pullPolicy: IfNotPresent
+
+flower:
+  enabled: true
   
 data:
   metadataConnection:
