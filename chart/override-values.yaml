@@ -1,5 +1,4 @@
-postgresql:
-  enabled: false
+defaultAirflowTag: latest
 
 images:
   airflow:
@@ -33,10 +32,15 @@ data:
     pass: Y2l0dXNwYXNzd29yZA==
     host: postgres-service
 
+postgresql:
+  enabled: false
+
 dags:
   persistence:
     enabled: false
+    storageClassName: longhorn
   gitSync:
+    enable: true
     repo: ssh://git@github.com/cachengo/Airflow-Dags
     branch: main
     subPath: ""
