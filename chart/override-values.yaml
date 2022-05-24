@@ -4,7 +4,7 @@ postgresql:
 images:
   airflow:
     repository: apache/airflow
-    tag: latest
+    tag: 2.3.0
     pullPolicy: IfNotPresent
   statsd:
     repository: cachengo/airflow-statsd-exporter
@@ -16,13 +16,13 @@ images:
   pgbouncerExporter:
     repository: cachengo/airflow-pgbouncer-exporter
     tag: latest
+  flower: 
+    repository: apache/airflow
+    tag: 2.3.0
   gitSync:
     repository: thockin/git-sync
     tag: :v3.1.6-dirty__linux_arm64
     pullPolicy: IfNotPresent
-
-flower:
-  enabled: true
   
 data:
   metadataConnection:
