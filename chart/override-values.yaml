@@ -1,4 +1,4 @@
-defaultAirflowTag: "2.3.0"
+# defaultAirflowTag: "2.3.0"
 
 images:
   # airflow:
@@ -24,7 +24,7 @@ images:
     pullPolicy: IfNotPresent
 
 flower:
-  enabled: true
+  enabled: false
 
 data:
   metadataConnection:
