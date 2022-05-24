@@ -20,7 +20,7 @@ images:
   #   tag: latest
   gitSync:
     repository: thockin/git-sync
-    tag: :v3.1.6-dirty__linux_arm64
+    tag: v3.1.6-dirty__linux_arm64
     pullPolicy: IfNotPresent
 
 flower:
@@ -40,7 +40,7 @@ dags:
     enabled: false
     storageClassName: longhorn
   gitSync:
-    enabled: true
+    enabled: false
     repo: ssh://git@github.com/cachengo/Airflow-Dags
     branch: main
     subPath: ""
