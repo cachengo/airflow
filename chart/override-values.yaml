@@ -23,7 +23,10 @@ images:
     repository: thockin/git-sync
     tag: :v3.1.6-dirty__linux_arm64
     pullPolicy: IfNotPresent
-  
+
+flower:
+  enabled: true
+
 data:
   metadataConnection:
     user: Y2l0dXN1c2Vy
