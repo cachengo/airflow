@@ -35,6 +35,9 @@ data:
 postgresql:
   enabled: false
 
+pgbouncer:
+  enabled: true
+
 dags:
   persistence:
     enabled: false
