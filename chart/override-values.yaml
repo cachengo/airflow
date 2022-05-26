@@ -30,7 +30,7 @@ data:
   metadataConnection:
     user: Y2l0dXN1c2Vy
     pass: Y2l0dXNwYXNzd29yZA==
-    host: postgres-service
+    host: postgres-service.default
 
 postgresql:
   enabled: false
