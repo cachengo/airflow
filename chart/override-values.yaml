@@ -1,10 +1,10 @@
 # defaultAirflowTag: "2.3.0"
 
 images:
-  # airflow:
-  #   repository: apache/airflow
-  #   tag: latest
-  #   pullPolicy: IfNotPresent
+  airflow:
+    repository: apache/airflow
+    tag: latest
+    pullPolicy: IfNotPresent
   statsd:
     repository: cachengo/airflow-statsd-exporter
     tag: latest
@@ -28,15 +28,42 @@ flower:
 
 data:
   metadataConnection:
-    user: Y2l0dXN1c2Vy
-    pass: Y2l0dXNwYXNzd29yZA==
-    host: postgres-service.default
+    user: postgres
+    pass: password
+    host: postgres-service-airflow
 
 postgresql:
   enabled: false
 
 pgbouncer:
   enabled: true
+
+workers:
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128 Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+scheduler:
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+webserver:
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
 
 dags:
   persistence:
@@ -47,3 +74,7 @@ dags:
     repo: ssh://git@github.com/cachengo/Airflow-Dags
     branch: main
     subPath: ""
+
+# logs:
+#   peresistance:
+#     enabled: true 
